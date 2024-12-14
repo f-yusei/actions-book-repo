@@ -11,3 +11,6 @@ jobs:
                 LITERAL_NUMBER: ${{ 1234 }}
                 LITERAL_STRING: ${{ 'Hello' }}
                 LITERAL_OMIT_STRING: World
+            - run: echo "${CONTEXT}"
+              env:
+                CONTEXT: ${{ toJSON(github) }}
